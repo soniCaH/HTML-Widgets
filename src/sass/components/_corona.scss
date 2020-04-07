@@ -1,0 +1,23 @@
+body.corona {
+  background: url('../img/bg-blue.jpg') no-repeat center / cover;
+}
+
+h1 {
+  color: var(--color-nord-snow-storm-4);
+}
+h3 {
+  span {
+    color: var(--color-nord-snow-storm-4);
+  }
+}
+
+.corona {
+  table {
+    min-width: 60vw;
+  }
+  th, td {
+    text-align: right;
+    padding: .75em;
+    // width: 25%;
+  }
+}
