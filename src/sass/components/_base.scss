@@ -1,0 +1,52 @@
+/**
+ * @section Base Styles
+ */
+:root {
+  --color-gray--blue: #123e51;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 100%;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  margin: 0;
+  place-items: center center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+h1 {
+  color: var(--color-gray--blue);
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 1.953rem;
+}
+
+h3 {
+  font-size: 1.563rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.8rem;
+}
