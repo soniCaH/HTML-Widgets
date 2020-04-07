@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-		<title>Copy Me</title>
-		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap">
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/modern-css-reset/dist/reset.min.css"/>
+    <title>Copy Me</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="css/main.min.css" />
   </head>
   <body>
@@ -14,7 +22,50 @@
       </header>
       <div>
         <section class="corona">
-
+          <h3>Wereldwijd</h3>
+          <table id="corona_global">
+            <thead>
+              <tr>
+                <th>Gevallen</th>
+                <th>Doden</th>
+                <th>Genezen</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="corona_global--total--confirmed"></td>
+                <td id="corona_global--total--deaths"></td>
+                <td id="corona_global--total--recovered"></td>
+              </tr>
+              <tr>
+                <td id="corona_global--new--confirmed"></td>
+                <td id="corona_global--new--deaths"></td>
+                <td id="corona_global--new--recovered"></td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>België</h3>
+          <table id="corona_belgium">
+            <thead>
+              <tr>
+                <th>Gevallen</th>
+                <th>Doden</th>
+                <th>Genezen</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="corona_belgium--total--confirmed"></td>
+                <td id="corona_belgium--total--deaths"></td>
+                <td id="corona_belgium--total--recovered"></td>
+              </tr>
+              <tr>
+                <td id="corona_belgium--new--confirmed"></td>
+                <td id="corona_belgium--new--deaths"></td>
+                <td id="corona_belgium--new--recovered"></td>
+              </tr>
+            </tbody>
+          </table>
         </section>
       </div>
       <footer>
