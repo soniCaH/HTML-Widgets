@@ -20,15 +20,21 @@
 //   console.log(data)
 // }
 async function getSummary() {
-  const { Global, Countries, Date: Datetime }  = await fetch("https://api.covid19api.com/summary")
+  const { Global, Countries, Date: Datetime } = await fetch(
+    "https://api.covid19api.com/summary"
+  )
     .then(function (response) {
       if (response.ok) {
         return response.json()
       } else {
+        document.getElementById("corona_global--total--confirmed").innerHTML =
+          "FOUTJE: " + response.status + response.text()
         alert(response.status + response.text())
       }
     })
     .catch(function (err) {
+      document.getElementById("corona_global--total--confirmed").innerHTML =
+        "ERROR: " + err
       alert(err)
     })
 

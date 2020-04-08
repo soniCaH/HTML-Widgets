@@ -43,9 +43,11 @@ function _getSummary() {
       if (response.ok) {
         return response.json();
       } else {
+        document.getElementById("corona_global--total--confirmed").innerHTML = "FOUTJE: " + response.status + response.text();
         alert(response.status + response.text());
       }
     }).catch(function (err) {
+      document.getElementById("corona_global--total--confirmed").innerHTML = "ERROR: " + err;
       alert(err);
     });
     document.getElementById("corona_global--total--confirmed").innerHTML = Global.TotalConfirmed.toLocaleString("nl-BE");
