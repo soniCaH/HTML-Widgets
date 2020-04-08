@@ -5,45 +5,27 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 /*! kevin-van-ransbeeck-widgets v1.0.0 | (c) 2020  | MIT License |  */
-function getConfirmed() {
-  return _getConfirmed.apply(this, arguments);
-}
-
-function _getConfirmed() {
-  _getConfirmed = _asyncToGenerator(function* () {
-    const response = yield fetch("https://api.covid19api.com/country/belgium/status/confirmed/live");
-    const data = yield response.json();
-    console.log(data);
-  });
-  return _getConfirmed.apply(this, arguments);
-}
-
-function getDeaths() {
-  return _getDeaths.apply(this, arguments);
-}
-
-function _getDeaths() {
-  _getDeaths = _asyncToGenerator(function* () {
-    const response = yield fetch("https://api.covid19api.com/country/belgium/status/deaths/live");
-    const data = yield response.json();
-    console.log(data);
-  });
-  return _getDeaths.apply(this, arguments);
-}
-
-function getRecovered() {
-  return _getRecovered.apply(this, arguments);
-}
-
-function _getRecovered() {
-  _getRecovered = _asyncToGenerator(function* () {
-    const response = yield fetch("https://api.covid19api.com/country/belgium/status/recovered/live");
-    const data = yield response.json();
-    console.log(data);
-  });
-  return _getRecovered.apply(this, arguments);
-}
-
+// async function getConfirmed() {
+//   const response = await fetch(
+//     "https://api.covid19api.com/country/belgium/status/confirmed/live"
+//   )
+//   const data = await response.json()
+//   console.log(data)
+// }
+// async function getDeaths() {
+//   const response = await fetch(
+//     "https://api.covid19api.com/country/belgium/status/deaths/live"
+//   )
+//   const data = await response.json()
+//   console.log(data)
+// }
+// async function getRecovered() {
+//   const response = await fetch(
+//     "https://api.covid19api.com/country/belgium/status/recovered/live"
+//   )
+//   const data = await response.json()
+//   console.log(data)
+// }
 function getSummary() {
   return _getSummary.apply(this, arguments);
 } // getConfirmed();
@@ -53,12 +35,19 @@ function getSummary() {
 
 function _getSummary() {
   _getSummary = _asyncToGenerator(function* () {
-    const response = yield fetch("https://api.covid19api.com/summary");
     const {
       Global,
       Countries,
       Date: Datetime
-    } = yield response.json();
+    } = yield fetch("https://api.covid19api.com/summary").then(function (response) {
+      if (response.ok) {
+        return response.json();
+      } else {
+        alert(response.status + response.text());
+      }
+    }).catch(function (err) {
+      alert(err);
+    });
     document.getElementById("corona_global--total--confirmed").innerHTML = Global.TotalConfirmed.toLocaleString("nl-BE");
     document.getElementById("corona_global--total--deaths").innerHTML = Global.TotalDeaths.toLocaleString("nl-BE");
     document.getElementById("corona_global--total--recovered").innerHTML = Global.TotalRecovered.toLocaleString("nl-BE");

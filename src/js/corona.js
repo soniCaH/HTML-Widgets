@@ -1,28 +1,36 @@
-async function getConfirmed() {
-  const response = await fetch(
-    "https://api.covid19api.com/country/belgium/status/confirmed/live"
-  )
-  const data = await response.json()
-  console.log(data)
-}
-async function getDeaths() {
-  const response = await fetch(
-    "https://api.covid19api.com/country/belgium/status/deaths/live"
-  )
-  const data = await response.json()
-  console.log(data)
-}
-async function getRecovered() {
-  const response = await fetch(
-    "https://api.covid19api.com/country/belgium/status/recovered/live"
-  )
-  const data = await response.json()
-  console.log(data)
-}
+// async function getConfirmed() {
+//   const response = await fetch(
+//     "https://api.covid19api.com/country/belgium/status/confirmed/live"
+//   )
+//   const data = await response.json()
+//   console.log(data)
+// }
+// async function getDeaths() {
+//   const response = await fetch(
+//     "https://api.covid19api.com/country/belgium/status/deaths/live"
+//   )
+//   const data = await response.json()
+//   console.log(data)
+// }
+// async function getRecovered() {
+//   const response = await fetch(
+//     "https://api.covid19api.com/country/belgium/status/recovered/live"
+//   )
+//   const data = await response.json()
+//   console.log(data)
+// }
 async function getSummary() {
-  const response = await fetch("https://api.covid19api.com/summary")
-
-  const { Global, Countries, Date: Datetime } = await response.json()
+  const { Global, Countries, Date: Datetime }  = await fetch("https://api.covid19api.com/summary")
+    .then(function (response) {
+      if (response.ok) {
+        return response.json()
+      } else {
+        alert(response.status + response.text())
+      }
+    })
+    .catch(function (err) {
+      alert(err)
+    })
 
   document.getElementById(
     "corona_global--total--confirmed"
