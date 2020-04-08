@@ -40,14 +40,18 @@ html {
 
 /* line 44, src/sass/components/_base.scss */
 body {
-  display: grid;
   height: 100vh;
   margin: 0;
-  place-items: center center;
   color: var(--body-text-color);
 }
 
-/* line 52, src/sass/components/_base.scss */
+/* line 51, src/sass/components/_base.scss */
+body article {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+/* line 57, src/sass/components/_base.scss */
 h1,
 h2,
 h3,
@@ -61,7 +65,7 @@ h6 {
   line-height: 1.5em;
 }
 
-/* line 64, src/sass/components/_base.scss */
+/* line 69, src/sass/components/_base.scss */
 h1 span,
 h2 span,
 h3 span,
@@ -74,53 +78,53 @@ h6 span {
   float: right;
 }
 
-/* line 72, src/sass/components/_base.scss */
+/* line 77, src/sass/components/_base.scss */
 h1 {
   color: var(--body-h1-color);
   font-size: 3.052rem;
 }
 
-/* line 77, src/sass/components/_base.scss */
+/* line 82, src/sass/components/_base.scss */
 h2 {
   font-size: 1.953rem;
 }
 
-/* line 81, src/sass/components/_base.scss */
+/* line 86, src/sass/components/_base.scss */
 h3 {
   font-size: 1.563rem;
 }
 
-/* line 85, src/sass/components/_base.scss */
+/* line 90, src/sass/components/_base.scss */
 h4 {
   font-size: 1.25rem;
 }
 
-/* line 89, src/sass/components/_base.scss */
+/* line 94, src/sass/components/_base.scss */
 h5 {
   font-size: 1rem;
 }
 
-/* line 93, src/sass/components/_base.scss */
+/* line 98, src/sass/components/_base.scss */
 h6 {
   font-size: 0.8rem;
 }
 
-/* line 96, src/sass/components/_base.scss */
+/* line 101, src/sass/components/_base.scss */
 h6 span {
   font-size: .8rem;
 }
 
-/* line 101, src/sass/components/_base.scss */
+/* line 106, src/sass/components/_base.scss */
 table {
   width: 100%;
 }
 
-/* line 104, src/sass/components/_base.scss */
+/* line 109, src/sass/components/_base.scss */
 th {
   text-align: left;
 }
 
-/* line 108, src/sass/components/_base.scss */
+/* line 113, src/sass/components/_base.scss */
 table {
   border-collapse: separate;
   border-spacing: 0;
@@ -139,7 +143,7 @@ table {
   padding-top: 0;
 }
 
-/* line 119, src/sass/components/_base.scss */
+/* line 124, src/sass/components/_base.scss */
 table caption {
   font-size: 1.5rem;
   margin: calc(2 * var(--universal-margin)) 0;
@@ -149,7 +153,7 @@ table caption {
           flex: 0 0 100%;
 }
 
-/* line 126, src/sass/components/_base.scss */
+/* line 131, src/sass/components/_base.scss */
 table thead, table tbody {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -161,28 +165,28 @@ table thead, table tbody {
   border: 0.0625rem solid var(--table-border-color);
 }
 
-/* line 132, src/sass/components/_base.scss */
+/* line 137, src/sass/components/_base.scss */
 table thead {
   z-index: 999;
   border-radius: var(--universal-border-radius) var(--universal-border-radius) 0 0;
   border-bottom: 0.0625rem solid var(--table-border-separator-color);
 }
 
-/* line 138, src/sass/components/_base.scss */
+/* line 143, src/sass/components/_base.scss */
 table th[scope="row"] {
   background: var(--table-body-back-color);
   border-top: 0.0625rem solid var(--table-border-color);
   text-align: left;
 }
 
-/* line 144, src/sass/components/_base.scss */
+/* line 149, src/sass/components/_base.scss */
 table tbody {
   border-top: 0;
   margin-top: calc(0 - var(--universal-margin));
   border-radius: 0 0 var(--universal-border-radius) var(--universal-border-radius);
 }
 
-/* line 150, src/sass/components/_base.scss */
+/* line 155, src/sass/components/_base.scss */
 table tr {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -190,32 +194,32 @@ table tr {
   padding: 0;
 }
 
-/* line 155, src/sass/components/_base.scss */
+/* line 160, src/sass/components/_base.scss */
 table th, table td {
   padding: calc(2 * var(--universal-padding));
 }
 
-/* line 159, src/sass/components/_base.scss */
+/* line 164, src/sass/components/_base.scss */
 table th {
   text-align: left;
   background: var(--table-head-back-color);
   color: var(--table-head-fore-color);
 }
 
-/* line 165, src/sass/components/_base.scss */
+/* line 170, src/sass/components/_base.scss */
 table td {
   background: var(--table-body-back-color);
   color: var(--table-body-fore-color);
   border-top: 0.0625rem solid var(--table-border-color);
 }
 
-/* line 171, src/sass/components/_base.scss */
+/* line 176, src/sass/components/_base.scss */
 table {
   overflow: auto;
   max-height: 400px;
 }
 
-/* line 176, src/sass/components/_base.scss */
+/* line 181, src/sass/components/_base.scss */
 table thead, table tbody {
   max-width: 100%;
   -webkit-box-flex: 0;
@@ -223,7 +227,7 @@ table thead, table tbody {
           flex: 0 0 100%;
 }
 
-/* line 181, src/sass/components/_base.scss */
+/* line 186, src/sass/components/_base.scss */
 table tr {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -234,7 +238,7 @@ table tr {
           flex: 0 0 100%;
 }
 
-/* line 186, src/sass/components/_base.scss */
+/* line 191, src/sass/components/_base.scss */
 table th, table td {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 0%;
@@ -243,14 +247,14 @@ table th, table td {
   text-overflow: ellipsis;
 }
 
-/* line 192, src/sass/components/_base.scss */
+/* line 197, src/sass/components/_base.scss */
 table thead {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
 
-/* line 197, src/sass/components/_base.scss */
+/* line 202, src/sass/components/_base.scss */
 table tbody tr:first-child td,
 table tbody tr:first-child th {
   border-top: 0;
