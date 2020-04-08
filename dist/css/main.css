@@ -129,6 +129,16 @@ table {
   border-collapse: separate;
   border-spacing: 0;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   padding: var(--universal-padding);
   padding-top: 0;
 }
@@ -138,10 +148,20 @@ table caption {
   font-size: 1.5rem;
   margin: calc(2 * var(--universal-margin)) 0;
   max-width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
 }
 
 /* line 131, src/sass/components/_base.scss */
 table thead, table tbody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   border: 0.0625rem solid var(--table-border-color);
 }
 
@@ -168,53 +188,73 @@ table tbody {
 
 /* line 155, src/sass/components/_base.scss */
 table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 0;
 }
 
-/* line 159, src/sass/components/_base.scss */
+/* line 160, src/sass/components/_base.scss */
 table th, table td {
   padding: calc(2 * var(--universal-padding));
 }
 
-/* line 163, src/sass/components/_base.scss */
+/* line 164, src/sass/components/_base.scss */
 table th {
   text-align: left;
   background: var(--table-head-back-color);
   color: var(--table-head-fore-color);
 }
 
-/* line 169, src/sass/components/_base.scss */
+/* line 170, src/sass/components/_base.scss */
 table td {
   background: var(--table-body-back-color);
   color: var(--table-body-fore-color);
   border-top: 0.0625rem solid var(--table-border-color);
 }
 
-/* line 175, src/sass/components/_base.scss */
+/* line 176, src/sass/components/_base.scss */
 table {
   overflow: auto;
   max-height: 400px;
 }
 
-/* line 180, src/sass/components/_base.scss */
+/* line 181, src/sass/components/_base.scss */
 table thead, table tbody {
   max-width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
 }
 
-/* line 184, src/sass/components/_base.scss */
+/* line 186, src/sass/components/_base.scss */
+table tr {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+/* line 191, src/sass/components/_base.scss */
 table th, table td {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0%;
+          flex: 1 0 0%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* line 189, src/sass/components/_base.scss */
+/* line 197, src/sass/components/_base.scss */
 table thead {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
 
-/* line 194, src/sass/components/_base.scss */
+/* line 202, src/sass/components/_base.scss */
 table tbody tr:first-child td,
 table tbody tr:first-child th {
   border-top: 0;
