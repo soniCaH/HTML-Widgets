@@ -17,11 +17,6 @@
     "last 2 versions",
     "> 0.25%"
   ],
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
-  },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
@@ -49,7 +44,9 @@
     "node-sass": "4.13.1",
     "prettier": "2.0.4"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@babel/runtime": "^7.9.2"
+  },
   "scripts": {
     "build": "gulp",
     "develop": "gulp watch",

@@ -21,6 +21,7 @@ async function getRecovered() {
 }
 async function getSummary() {
   const response = await fetch("https://api.covid19api.com/summary")
+
   const { Global, Countries, Date: Datetime } = await response.json()
 
   document.getElementById(
