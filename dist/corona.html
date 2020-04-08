@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Corona Status update</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/main.min.css" />
+  </head>
+  <body class="corona__wrapper">
+    <article>
+      <header>
+        <h1>COVID-19 Statistieken</h1>
+        <h2>Status</h2>
+      </header>
+      <div>
+        <section class="corona">
+          <h3>Wereldwijd <span id="corona_global__datetime"></span></h3>
+          <table id="corona_global">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Bevestigd</th>
+                <th scope="col">Doden</th>
+                <th scope="col">Genezen</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Totaal</th>
+                <td id="corona_global--total--confirmed"></td>
+                <td id="corona_global--total--deaths"></td>
+                <td id="corona_global--total--recovered"></td>
+              </tr>
+              <tr>
+                <th scope="row">Vandaag</th>
+                <td id="corona_global--new--confirmed"></td>
+                <td id="corona_global--new--deaths"></td>
+                <td id="corona_global--new--recovered"></td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>België <span id="corona_belgium__datetime"></span></h3>
+          <table id="corona_belgium">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Bevestigd</th>
+                <th scope="col">Doden</th>
+                <th scope="col">Genezen</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Totaal</th>
+                <td id="corona_belgium--total--confirmed"></td>
+                <td id="corona_belgium--total--deaths"></td>
+                <td id="corona_belgium--total--recovered"></td>
+              </tr>
+              <tr>
+                <th scope="row">Vandaag</th>
+                <td id="corona_belgium--new--confirmed"></td>
+                <td id="corona_belgium--new--deaths"></td>
+                <td id="corona_belgium--new--recovered"></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </article>
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/corona.js"></script>
+  </body>
+</html>

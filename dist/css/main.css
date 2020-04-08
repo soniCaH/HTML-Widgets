@@ -1,0 +1,309 @@
+/*! kevin-van-ransbeeck-widgets v1.0.0 | (c) 2020  | MIT License |  */
+/* line 1, src/sass/components/_base.scss */
+:root {
+  --color-nord-polar-night-0: #2E3440;
+  --color-nord-polar-night-1: #3B4252;
+  --color-nord-polar-night-2: #434C5E;
+  --color-nord-polar-night-3: #4C566A;
+  --color-nord-snow-storm-4: #D8DEE9;
+  --color-nord-snow-storm-5: #E5E9F0;
+  --color-nord-snow-storm-6: #ECEFF4;
+  --color-nord-frost-7: #8FBCBB;
+  --color-nord-frost-8: #88C0D0;
+  --color-nord-frost-9: #81A1C1;
+  --color-nord-frost-10: #5E81AC;
+  --color-nord-aurora-11: #BF616A;
+  --color-nord-aurora-12: #D08770;
+  --color-nord-aurora-13: #EBCB8B;
+  --color-nord-aurora-14: #A3BE8C;
+  --color-nord-aurora-15: #B48EAD;
+  --body-text-color: var(--color-nord-polar-night-3);
+  --body-header-color: var(--color-nord-polar-night-3);
+  --body-h1-color: var(--color-nord-polar-night-0);
+  --table-border-color: var(--color-nord-snow-storm-4);
+  --table-border-separator-color: var(--color-nord-polar-night-2);
+  --table-head-back-color: var(--color-nord-snow-storm-5);
+  --table-head-fore-color: var(--color-nord-polar-night-0);
+  --table-body-back-color: var(--color-nord-snow-storm-6);
+  --table-body-fore-color: var(--color-nord-polar-night-0);
+  --table-body-alt-back-color: var(--color-nord-snow-storm-5);
+}
+
+/**
+ * @section Base Styles
+ */
+/* line 39, src/sass/components/_base.scss */
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 100%;
+}
+
+/* line 44, src/sass/components/_base.scss */
+body {
+  display: grid;
+  height: 100vh;
+  margin: 0;
+  place-items: center center;
+  color: var(--body-text-color);
+}
+
+/* line 52, src/sass/components/_base.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin-top: 1em;
+  margin-bottom: .5em;
+  color: var(--body-header-color);
+  line-height: 1.5em;
+}
+
+/* line 64, src/sass/components/_base.scss */
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span {
+  font-size: 1rem;
+  line-height: inherit;
+  vertical-align: middle;
+  float: right;
+}
+
+/* line 72, src/sass/components/_base.scss */
+h1 {
+  color: var(--body-h1-color);
+  font-size: 3.052rem;
+}
+
+/* line 77, src/sass/components/_base.scss */
+h2 {
+  font-size: 1.953rem;
+}
+
+/* line 81, src/sass/components/_base.scss */
+h3 {
+  font-size: 1.563rem;
+}
+
+/* line 85, src/sass/components/_base.scss */
+h4 {
+  font-size: 1.25rem;
+}
+
+/* line 89, src/sass/components/_base.scss */
+h5 {
+  font-size: 1rem;
+}
+
+/* line 93, src/sass/components/_base.scss */
+h6 {
+  font-size: 0.8rem;
+}
+
+/* line 96, src/sass/components/_base.scss */
+h6 span {
+  font-size: .8rem;
+}
+
+/* line 101, src/sass/components/_base.scss */
+table {
+  width: 100%;
+}
+
+/* line 104, src/sass/components/_base.scss */
+th {
+  text-align: left;
+}
+
+/* line 108, src/sass/components/_base.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding: var(--universal-padding);
+  padding-top: 0;
+}
+
+/* line 119, src/sass/components/_base.scss */
+table caption {
+  font-size: 1.5rem;
+  margin: calc(2 * var(--universal-margin)) 0;
+  max-width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+/* line 126, src/sass/components/_base.scss */
+table thead, table tbody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  border: 0.0625rem solid var(--table-border-color);
+}
+
+/* line 132, src/sass/components/_base.scss */
+table thead {
+  z-index: 999;
+  border-radius: var(--universal-border-radius) var(--universal-border-radius) 0 0;
+  border-bottom: 0.0625rem solid var(--table-border-separator-color);
+}
+
+/* line 138, src/sass/components/_base.scss */
+table th[scope="row"] {
+  background: var(--table-body-back-color);
+  border-top: 0.0625rem solid var(--table-border-color);
+  text-align: left;
+}
+
+/* line 144, src/sass/components/_base.scss */
+table tbody {
+  border-top: 0;
+  margin-top: calc(0 - var(--universal-margin));
+  border-radius: 0 0 var(--universal-border-radius) var(--universal-border-radius);
+}
+
+/* line 150, src/sass/components/_base.scss */
+table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+
+/* line 155, src/sass/components/_base.scss */
+table th, table td {
+  padding: calc(2 * var(--universal-padding));
+}
+
+/* line 159, src/sass/components/_base.scss */
+table th {
+  text-align: left;
+  background: var(--table-head-back-color);
+  color: var(--table-head-fore-color);
+}
+
+/* line 165, src/sass/components/_base.scss */
+table td {
+  background: var(--table-body-back-color);
+  color: var(--table-body-fore-color);
+  border-top: 0.0625rem solid var(--table-border-color);
+}
+
+/* line 171, src/sass/components/_base.scss */
+table {
+  overflow: auto;
+  max-height: 400px;
+}
+
+/* line 176, src/sass/components/_base.scss */
+table thead, table tbody {
+  max-width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+/* line 181, src/sass/components/_base.scss */
+table tr {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+/* line 186, src/sass/components/_base.scss */
+table th, table td {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0%;
+          flex: 1 0 0%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 192, src/sass/components/_base.scss */
+table thead {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+/* line 197, src/sass/components/_base.scss */
+table tbody tr:first-child td,
+table tbody tr:first-child th {
+  border-top: 0;
+}
+
+/* line 1, src/sass/components/_weather.scss */
+.weather__wrapper {
+  --body-text-color: var(--color-nord-snow-storm-6);
+  --body-header-color: var(--color-nord-snow-storm-4);
+  background: url("../img/bg-sunrise.jpg") no-repeat center/cover;
+}
+
+/* line 7, src/sass/components/_weather.scss */
+.weather__wrapper h1 + h2 {
+  margin-top: -1.526rem;
+}
+
+/* line 12, src/sass/components/_weather.scss */
+.weather {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+}
+
+/* line 20, src/sass/components/_weather.scss */
+.weather__upcoming_row {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* line 1, src/sass/components/_corona.scss */
+.corona__wrapper {
+  background: url("../img/bg-blue.jpg") no-repeat center/cover;
+}
+
+/* line 5, src/sass/components/_corona.scss */
+h1 {
+  color: var(--color-nord-snow-storm-6);
+}
+
+/* line 9, src/sass/components/_corona.scss */
+h3 span {
+  color: var(--color-nord-snow-storm-4);
+}
+
+/* line 15, src/sass/components/_corona.scss */
+.corona table {
+  min-width: 60vw;
+}
+
+/* line 18, src/sass/components/_corona.scss */
+.corona th, .corona td {
+  text-align: right;
+  padding: .75em;
+}
