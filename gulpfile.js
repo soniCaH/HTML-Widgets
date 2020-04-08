@@ -80,6 +80,7 @@ var sass = require("gulp-sass")
 var postcss = require("gulp-postcss")
 var prefix = require("autoprefixer")
 var minify = require("cssnano")
+var babel = require('gulp-babel')
 
 // SVGs
 var svgmin = require("gulp-svgmin")
@@ -106,7 +107,8 @@ var cleanDist = function (done) {
 // Repeated JavaScript tasks
 var jsTasks = lazypipe()
   .pipe(header, banner.main, { package: package })
-  .pipe(dest, paths.scripts.output)
+	.pipe(babel)
+	.pipe(dest, paths.scripts.output)
   .pipe(rename, { suffix: ".min" })
   .pipe(uglify)
   .pipe(header, banner.main, { package: package })
