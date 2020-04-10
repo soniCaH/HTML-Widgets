@@ -35,7 +35,7 @@
 /* line 39, src/sass/components/_base.scss */
 html {
   font-family: 'Montserrat', sans-serif;
-  font-size: 100%;
+  font-size: 20px;
 }
 
 /* line 44, src/sass/components/_base.scss */
@@ -299,7 +299,7 @@ h3 span {
 
 /* line 15, src/sass/components/_corona.scss */
 .corona table {
-  min-width: 60vw;
+  min-width: 80vw;
 }
 
 /* line 18, src/sass/components/_corona.scss */
