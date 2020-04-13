@@ -57,8 +57,7 @@ async function getSummary() {
   if (localStorageAvailable) {
     if (window.localStorage.getItem("covid19")) {
       const oldData = JSON.parse(window.localStorage.getItem("covid19"))
-      if (oldData.date >= date - 60 * 60000) {
-        console.log(oldData)
+      if (oldData.date >= date - 15 * 60000) {
         cachedResponse = oldData.data
       }
     }
