@@ -24,7 +24,7 @@
     "babel-cli": "6.26.0",
     "babel-core": "6.26.3",
     "babel-preset-es2015": "6.24.1",
-    "browser-sync": "2.26.7",
+    "browser-sync": "2.26.14",
     "cssnano": "4.1.10",
     "del": "5.1.0",
     "gulp": "4.0.2",
